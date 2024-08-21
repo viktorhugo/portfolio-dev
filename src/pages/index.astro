@@ -4,7 +4,10 @@ import Badge from '../components/Badge.astro';
 import SocialPill from '../components/SocialPill.astro';
 import LinkedInIcon from '../icons/LinkedIn.astro';
 import GitHubIcon from '../icons/GitHub.astro';
+import Briefcase from '../icons/Briefcase.astro';
 import MailIcon from '../icons/Mail.astro';
+import Experience from '../components/experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 ---
 
 <Layout 
@@ -13,15 +16,15 @@ import MailIcon from '../icons/Mail.astro';
 >
 
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
 
+		<SectionContainer class="py-44 pb-24">
 			<!-- section image -->
 			<img 
 				class="rounded-full size-12 mb-4" 
 				src="https://media.licdn.com/dms/image/D4E03AQGjBJot71FUEw/profile-displayphoto-shrink_200_200/0/1720049039634?e=2147483647&v=beta&t=kmNul_tVn598QGdoQz870CYWROabVHk0iYNIdHWOOJY" 
 				alt="victor photo"
 			/>
-
+	
 			<!-- section title -->
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
 				Hey, I'm Victor Mosquera
@@ -33,7 +36,7 @@ import MailIcon from '../icons/Mail.astro';
 					<Badge>Available for hire</Badge>
 				</a> 
 			</h1>
-
+	
 			<!-- section text -->
 			<h2 class="text-2xl opacity-80 text-wrap">
 				<span>
@@ -49,7 +52,7 @@ import MailIcon from '../icons/Mail.astro';
 					Specialized in creating unique applications.
 				</span>
 			</h2>
-
+	
 			<!-- section links -->
 			<nav class="flex gap-x-4 mt-8">
 				<SocialPill href="https://www.linkedin.com/in/victor-mosquera-capy">
@@ -65,7 +68,16 @@ import MailIcon from '../icons/Mail.astro';
 					viktor1103@gmail.com
 				</SocialPill>
 			</nav>
+		</SectionContainer>
 
-		</section>
+
+		<SectionContainer id="Experience">
+			<h2 class=" text-2xl mb-6 font-semibold flex gap-x-3 items-center">
+				<Briefcase class:list={[ 'size-7' ]}/>
+				Experience 
+			</h2>
+			<Experience />
+		</SectionContainer>
+
 	</main>
 </Layout>
